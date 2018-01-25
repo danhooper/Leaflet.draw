@@ -16,9 +16,9 @@ L.Edit.Circle = L.Edit.CircleMarker.extend({
 
 	_getResizeMarkerPoint: function (latlng) {
 		// From L.shape.getBounds()
-		var delta = this._shape._radius * Math.cos(Math.PI / 4),
+		var delta = this._shape._radius * Math.cos(0),
 			point = this._map.project(latlng);
-		return this._map.unproject([point.x + delta, point.y - delta]);
+		return this._map.unproject([point.x + delta, point.y]);
 	},
 
 	_resize: function (latlng) {
